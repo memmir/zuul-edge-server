@@ -19,19 +19,7 @@ spring:
 
 info:
   component: Zuul Edge  Server
-server:
-  port: 8762
----
-spring:
-  profiles: localhost
 
-
-eureka:
-  client:
-    service-url:
-     default-zone: http://localhost:8761/eureka
-  instance:
-    instance-id: ${spring.application.name}:${random.uuid}
 
 server:
   port: 8762
@@ -73,6 +61,6 @@ eureka:
     service-url:
       defaultZone: http://eureka-server:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${random.uuid}
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 10
+    instance-id: ${spring.application.name}:${random.uuid}
