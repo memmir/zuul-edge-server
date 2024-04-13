@@ -4,6 +4,7 @@ import jakarta.ws.rs.HttpMethod;
 import org.apache.catalina.filters.CorsFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,9 +16,10 @@ import java.util.Collections;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-@EnableDiscoveryClient
-@SpringBootApplication
+
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @CrossOrigin(origins = "*", allowedHeaders = "*", maxAge=3600)
+@EnableDiscoveryClient
 public class  ZuulEdgeServerApplication {
 
     public static void main(String[] args) {
