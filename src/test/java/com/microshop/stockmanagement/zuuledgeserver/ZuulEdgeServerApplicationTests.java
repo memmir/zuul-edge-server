@@ -1,4 +1,4 @@
-package com.mahmuttech.stockmanagement.zuuledgeserver;
+package com.microshop.stockmanagement.zuuledgeserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
