@@ -17,3 +17,6 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 # -t  ---> tagini belirrtiğimiz anlamına geliyor.
 # 0.0.1 ---> verdiğimiz versiyon
 # En sondaki nokta ise dizini belirtiyoruzç
+
+
+#docker-compose -p stock-management -f zuul-edge-server.yml up -d
